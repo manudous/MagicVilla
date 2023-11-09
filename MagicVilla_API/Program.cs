@@ -1,5 +1,7 @@
 using MagicVilla_API;
 using MagicVilla_API.Datos;
+using MagicVilla_API.Repositorio;
+using MagicVilla_API.Repositorio.IRepositorio;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(option =>

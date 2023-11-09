@@ -18,6 +18,5 @@ namespace MagicVilla_API.Modelos.DTO
         public string ImageUrl { get; set; } = string.Empty;
 
         public string Amenidad { get; set; } = string.Empty;
-        public object Id { get; internal set; }
     }
 }
